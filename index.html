@@ -885,22 +885,14 @@ main {
 
 <div class="app">
   <aside>
-    <div class="sidebar-section-label">HCM Competitors</div>
+    <div class="sidebar-section-label">Absence & Sub Management</div>
 
     <button class="comp-card active" onclick="selectComp('redrover', this)">
       <div class="comp-card-top">
         <span class="comp-card-name">Red Rover</span>
         <span class="threat-badge threat-high">HIGH</span>
       </div>
-      <div class="comp-card-sub">Absence · Sub Management</div>
-    </button>
-
-    <button class="comp-card" onclick="selectComp('powerschool', this)">
-      <div class="comp-card-top">
-        <span class="comp-card-name">PowerSchool</span>
-        <span class="threat-badge threat-high">HIGH</span>
-      </div>
-      <div class="comp-card-sub">Unified Talent · Full HCM</div>
+      <div class="comp-card-sub">Absence · Sub Management · All HCM</div>
     </button>
 
     <button class="comp-card" onclick="selectComp('subcentral', this)">
@@ -911,12 +903,40 @@ main {
       <div class="comp-card-sub">Absence · Sub Fill</div>
     </button>
 
+    <div class="sidebar-section-label">Full Platform</div>
+
+    <button class="comp-card" onclick="selectComp('powerschool', this)">
+      <div class="comp-card-top">
+        <span class="comp-card-name">PowerSchool</span>
+        <span class="threat-badge threat-high">HIGH</span>
+      </div>
+      <div class="comp-card-sub">Unified Talent · All HCM Segments</div>
+    </button>
+
+    <div class="sidebar-section-label">Point Solutions</div>
+
     <button class="comp-card" onclick="selectComp('applitrack', this)">
       <div class="comp-card-top">
-        <span class="comp-card-name">AppliTrack / Hire+</span>
+        <span class="comp-card-name">Hire+ (AppliTrack)</span>
         <span class="threat-badge threat-med">MED</span>
       </div>
-      <div class="comp-card-sub">Talent Acquisition · ATS</div>
+      <div class="comp-card-sub">Talent Acquisition · ATS · All Hiring</div>
+    </button>
+
+    <button class="comp-card" onclick="selectComp('tcp', this)">
+      <div class="comp-card-top">
+        <span class="comp-card-name">TimeClockPlus</span>
+        <span class="threat-badge threat-med">MED</span>
+      </div>
+      <div class="comp-card-sub">Time & Attendance · Red Rover Partner</div>
+    </button>
+
+    <button class="comp-card" onclick="selectComp('kickup', this)">
+      <div class="comp-card-top">
+        <span class="comp-card-name">KickUp</span>
+        <span class="threat-badge threat-med">MED</span>
+      </div>
+      <div class="comp-card-sub">Professional Growth · PD Platform</div>
     </button>
 
     <div class="sidebar-divider"></div>
@@ -940,36 +960,38 @@ const DATA = {
 // ── RED ROVER ──────────────────────────────────────────────────────
 redrover: {
   name: "Red Rover",
-  tagline: "Absence & Substitute Management · Mobile-First",
+  tagline: "Absence & Substitute Management · Mobile-First · All HCM Segments",
   threat: "HIGH", threat_class: "threat-high",
-  updated: "4 hours ago",
-  sources: "Website · G2 · LinkedIn · App Store",
+  updated: "Feb 2026",
+  sources: "Website · G2 · LinkedIn · App Store · Competitive Intel Summary Feb 2026",
   stats: [
-    { value:"500+",  label:"Districts",       color:"var(--text-primary)" },
-    { value:"4.1★",  label:"G2 Rating",       color:"var(--amber)" },
-    { value:"~20%",  label:"Absence Mkt",     color:"var(--red)" },
-    { value:"PRIVATE",label:"Ownership",      color:"var(--text-muted)" },
+    { value:"1,700+", label:"Districts (45 States)", color:"var(--red)" },
+    { value:"4.1★",   label:"G2 Rating",             color:"var(--amber)" },
+    { value:"~25%",   label:"Absence Mkt Share",      color:"var(--red)" },
+    { value:"PRIVATE",label:"Ownership",              color:"var(--text-muted)" },
   ],
-  summary: "Red Rover is Frontline's fastest-growing direct competitor in the absence and substitute management space. They've built significant momentum with a slick mobile app, a clean UX, and aggressive pricing — particularly targeting mid-size districts (1,500–8,000 students) frustrated with legacy tools. Their primary weaknesses are shallow HR integration, no payroll connectivity, and a product that stops at absence — with no path to a broader HCM suite. The sales battle is often won or lost on the demo: Red Rover demos beautifully, so Frontline must counter with depth, integration story, and total cost of ownership.",
+  summary: "Red Rover is a high-growth competitor positioning on 'modern/focused' UX and fast implementation. CSO Jon Kost's Gong analysis shows Red Rover appears in deals during price screening + integration expectations conversations, winning on modern positioning, broad integration catalog, and documented district switches (Corona-Norco USD). Frontline's counter strategy (CSO-validated): (1) Pricing clarity — calculate real TCO including integration labor costs Red Rover doesn't disclose; (2) Outcome proof — show 24-month satisfaction, not 6-month impressions; (3) Integration truth-telling — Red Rover's CSV file 'integrations' vs. Frontline's real-time data sync; (4) Reliability credibility — 25+ years of K-12 playbook vs. Red Rover learning on the job. Red Rover looks great for 6-9 months (modern/focused works), then hits structural walls: no native payroll integration ($10K-18K annual hidden costs), shallow CBA configurability, no full HCM suite path. Boomerang pattern: districts return within 12-24 months when operational limitations become critical.",
   strengths: [
-    { text:"Native iOS/Android app with 4.6★ rating — substitutes and coordinators love the UX; it demos extremely well", conf:"high" },
-    { text:"Aggressive pricing — typically 25-35% below Frontline's Absence standalone; willing to do multi-year discounts to win", conf:"high" },
-    { text:"Fast implementation — districts report 30-45 days to go-live; strong onboarding team", conf:"high" },
-    { text:"Gaining brand awareness fast via word-of-mouth at AASA, SHRM-EB, and state HR conferences", conf:"med" },
-    { text:"Clean, modern UI reduces training resistance from coordinators — 'intuitive from day one' is a common review quote", conf:"high" },
+    { text:"Native iOS/Android app with 4.6★ rating — substitutes and coordinators love the UX; demos extremely well against Frontline's fragmented interface", conf:"high" },
+    { text:"13-second average support response time — an explicit selling point they now use against Frontline in every deal", conf:"high" },
+    { text:"Aggressive pricing — typically 25-35% below Frontline Absence standalone; willing to do multi-year discounts to win logos", conf:"high" },
+    { text:"TimeClockPlus (TCP) partnership closes the T&A gap — now offering a bundled absence + time-clock solution for small-to-mid districts without needing Frontline", conf:"high" },
+    { text:"Weekly feature update cadence — they publicly publish a changelog and use release speed as a proof point against Frontline's slower release cycle", conf:"med" },
+    { text:"Fast implementation — districts report 30-45 days to go-live; strong onboarding team; Corona-Norco USD (July 2025) is their marquee reference win from Frontline", conf:"high" },
   ],
   weaknesses: [
-    { text:"No integration with payroll, benefits, or HRIS — absence data must be exported manually or via CSV; creates reconciliation burden", conf:"high" },
-    { text:"No onboarding, recruiting, or performance modules — purely an absence tool with no roadmap for broader HCM", conf:"high" },
-    { text:"CBA (collective bargaining agreement) configurability is limited — districts with complex union rules frequently hit walls", conf:"high" },
-    { text:"Smaller support team — G2 reviews cite 48-72 hour response times for non-critical issues vs. Frontline's dedicated team model", conf:"med" },
-    { text:"No analytics beyond basic absence reporting — no predictive fill, trend analysis, or workforce planning insights", conf:"high" },
-    { text:"District references skew small — limited track record with 10K+ student districts or multi-site implementations", conf:"med" },
+    { text:"No native payroll integration — absence data must be exported manually or via CSV; creates reconciliation burden even with TCP partnership in place", conf:"high" },
+    { text:"No onboarding, recruiting, or performance modules — their HCM suite ambitions are limited; TCP partnership fills T&A but doesn't connect to the full staff lifecycle", conf:"high" },
+    { text:"CBA (collective bargaining agreement) configurability is limited — districts with complex union rules frequently hit walls; Red Rover reference districts skew non-union", conf:"high" },
+    { text:"No KickUp-equivalent PD integration — professional growth remains a gap; their Learning Forward partnership (via KickUp) is early and coaching-focused only", conf:"med" },
+    { text:"No workforce analytics beyond basic absence reporting — no predictive fill, trend analysis, or workforce planning insights", conf:"high" },
+    { text:"Rapid growth straining operations — 13-second support claim may not scale as they pass 2,000+ districts", conf:"low" },
   ],
   positioning: [
-    { text:"'Absence management shouldn't be complicated' — leads with simplicity and modern UX against legacy tools", conf:"high" },
-    { text:"Explicitly targets Frontline and Aesop as their primary displacement target — their sales decks reference 'legacy Aesop'", conf:"high" },
-    { text:"Leans hard on mobile — 'built for the way educators work today' messaging resonates with younger coordinators", conf:"med" },
+    { text:"'Modern absence management built for the way educators work today' — leads with UX and speed against Frontline's legacy Aesop reputation", conf:"high" },
+    { text:"Explicitly targets Frontline/Aesop as displacement target — sales decks reference 'legacy Aesop'; Corona-Norco USD win (July 2025) is their marquee proof point", conf:"high" },
+    { text:"'13-second support, weekly features, transparent pricing' — using service quality and transparency as a three-pillar differentiator in every competitive deal", conf:"high" },
+    { text:"Now pitching 'complete HCM without the complexity' via TCP partnership — broadening their story beyond absence-only for the first time", conf:"med" },
   ],
   traps: [
     {
@@ -1014,6 +1036,30 @@ redrover: {
       headline: "References: ask specifically about complex CBA districts.",
       body: "Red Rover's reference districts tend to be smaller and non-union. Ask them for a reference from a district with a complex bargaining agreement and a 3,000+ sub pool. The references rarely exist — and that silence is the answer."
     },
+    {
+      headline: "Our job posting network reaches 100x more educators.",
+      body: "Frontline's 12,000+ district network means your job postings reach millions of qualified educators through our proactive recruiting campaigns. Red Rover's 1,700 districts can't match this network effect. The result: faster fills, higher quality candidates, and lower recruiting costs for your district."
+    },
+    {
+      headline: "Enterprise security: we're SOC-2 compliant.",
+      body: "For larger districts with data governance and compliance requirements, Frontline's SOC-2 certification is a requirement Red Rover doesn't meet. If your RFP includes enterprise security standards, we win before the conversation even starts."
+    },
+    {
+      headline: "Let's calculate the real TCO — including integration costs Red Rover doesn't disclose.",
+      body: "Red Rover's broad integration catalog sounds impressive until you look under the hood. Red Rover integrations mean CSV file exports and manual uploads every pay period. Frontline's integrations are real-time, bidirectional data flow. When you calculate integration labor costs (hours/month × pay periods × labor rate), Frontline's 'higher' license cost becomes lower total cost of ownership. Pricing clarity always wins over pricing illusion."
+    },
+    {
+      headline: "Show me the district that switched to Red Rover and is still happy at 24 months.",
+      body: "Corona-Norco USD is Red Rover's marquee case study — and we respect it. But ask Red Rover for a reference from a district that switched to Red Rover 2+ years ago and is completely satisfied today. The silence is the answer. Most districts that tried Red Rover for absence hit walls by month 12-18 when payroll integration gaps and CBA configurability limits become critical. We have customers who returned to Frontline after discovering these gaps. Red Rover's outcome proof is at month 6. Our outcome proof is at month 24."
+    },
+    {
+      headline: "Integration truth-telling: CSV files aren't integration.",
+      body: "When Red Rover lists integration with Skyward, Munis, Tyler, or any payroll system, ask what that integration means. Most answers will be: 'We export a file that you upload to payroll.' That's not integration. That's a workaround. Frontline's payroll integrations are real: data syncs automatically, reconciliation happens in real-time, zero manual steps. There's a massive difference between 'we have a file export' and 'we have integrated payroll.' Don't let integration breadth fool you — integration depth is what matters."
+    },
+    {
+      headline: "Frontline: 25+ years of K-12 HCM playbook. Red Rover: modern but unproven at scale.",
+      body: "Red Rover's growth is impressive — 1,700 districts in 5 years. Frontline is serving 12,000+ districts with 25+ years of K-12 experience. When your district faces a complex union negotiation, a payroll emergency at 4pm on Friday, or a compliance audit, you want a vendor with 25 years of K-12 playbook — not a vendor learning on the job. Modern and fresh are good for UX. Reliability and expertise are good for crises. Both matter, but only one solves your emergency."
+    },
   ],
   battlecard: {
     their_strengths: [
@@ -1027,6 +1073,9 @@ redrover: {
       "CBA/union rules configurability for complex contracts",
       "Advanced analytics — predictive fill, pool health, trend reporting",
       "Path to full HCM suite — one platform for full staff lifecycle",
+      "12,000+ district network vs 1,700 — largest educator job posting pool in K-12",
+      "SOC-2 compliance — enterprise security standard Red Rover doesn't meet",
+      "Proactive recruiting — automatically reach qualified candidates; Red Rover relies on passive job boards",
       "Larger district track record and enterprise support model",
     ],
     position: [
@@ -1036,59 +1085,154 @@ redrover: {
     ]
   },
   moves: [
+    { date:"JUL 2025", type:"threat", icon:"⚠️", title:"Corona-Norco USD Switches from Frontline to Red Rover", desc:"One of the most visible Frontline-to-Red Rover conversions on record. Corona-Norco USD cited UX, mobile experience, and support responsiveness as primary drivers. Red Rover is actively using this as a reference in every competitive deal — know this story before you walk into any Southern California district." },
+    { date:"2025", type:"threat", icon:"⚠️", title:"TCP Partnership Closes T&A Gap", desc:"Red Rover + TimeClockPlus bundled solution now directly competes against Frontline Absence & Time in the small-to-mid market. Districts that previously needed Frontline for both absence AND time clock now have a credible alternative. Changes the TCO conversation." },
+    { date:"2025", type:"threat", icon:"🎯", title:"Competing Across All HCM Segments", desc:"Competitive Intel Summary (Feb 2026) now lists Red Rover as a threat across ALL HCM segments — not just absence. Their Learning Forward coaching partnership (via KickUp integration) and TCP bundle represent systematic suite expansion." },
     { date:"FEB 2024", type:"threat", icon:"⚠️", title:"Launched 'Red Rover Analytics 2.0'", desc:"New reporting dashboard with trend charts and building-level comparisons. Partially closes the analytics gap — but still no ad-hoc querying or payroll-connected reporting." },
-    { date:"JAN 2024", type:"threat", icon:"🎯", title:"Hired VP of Enterprise Sales from Frontline", desc:"Direct competitive signal — building an enterprise motion to target 5K+ student districts. Expect more sophisticated deals and references in larger markets by Q3." },
-    { date:"NOV 2023", type:"opportunity", icon:"✅", title:"G2 support rating dropped to 3.6", desc:"Following rapid headcount growth, support SLAs have slipped. Multiple reviews cite 3-5 day response times. Opportunity to highlight Frontline's dedicated support model." },
-    { date:"SEP 2023", type:"neutral", icon:"📣", title:"Rebranded from 'Sub Connector' to 'Red Rover'", desc:"Full rebrand with new website and positioning. Invested heavily in brand awareness at fall conferences. Still no product expansion beyond absence announced." },
+    { date:"JAN 2024", type:"threat", icon:"🎯", title:"Hired VP of Enterprise Sales from Frontline", desc:"Direct competitive signal — building an enterprise motion to target 5K+ student districts. Now in 45 states and adding enterprise references." },
   ],
   suggested_qs: [
     "How do we handle a prospect who says Red Rover is cheaper?",
-    "Red Rover demos better than us — what do we do?",
-    "What districts should we target that are currently on Red Rover?",
-    "How do we talk about Red Rover's lack of payroll integration without sounding defensive?",
+    "Red Rover now claims all HCM — how do we respond?",
+    "How do we counter the TCP + Red Rover bundle pitch?",
+    "How do we discuss the Corona-Norco USD loss without sounding defensive?",
     "What's our best one-liner to differentiate from Red Rover?",
-    "How do we counter Red Rover's 'built for modern educators' messaging?",
+    "How do we counter Red Rover's 13-second support response claim?",
   ],
+  future_enhancements: {
+    boomerang_narrative: "CSO Jon Kost reports that Frontline has found many districts who boomerang/return from Red Rover after 12-24 months when payroll integration gaps and CBA configurability limitations become critical in production use. Future phase should document 2-3 specific customer stories (district name, timeline, reason for return) to support the 'point solution limitation' narrative. This would be powerful proof point: 'We have reference customers who tried Red Rover and returned — they can speak to the gap you'll hit.'",
+  },
   qa: {
     "How do we handle a prospect who says Red Rover is cheaper?":
-      `Validate the number, then reframe the comparison.<br><br><strong>Step 1:</strong> Agree — "You're right, Red Rover's license fee is lower for absence-only."<br><br><strong>Step 2:</strong> Introduce TCO. <em>Ask: "How many hours per pay period does your team spend reconciling absence data with payroll today? And how many hours after you switch to Red Rover?" Most districts haven't calculated this. At 8 hours/cycle × 24 pay periods × $35/hr = $6,720/year in hidden labor cost — often wiping out the savings.</em><br><br><strong>Step 3:</strong> Future-proof the conversation. "In 3 years when you want integrated recruiting or PD tracking, what does the Red Rover upgrade path look like?" There isn't one. Frontline's total cost when you include future integrations is almost always lower.`,
+      `Validate the number, then reframe the comparison.<br><br><strong>Step 1:</strong> Agree — "You're right, Red Rover's license fee is lower for absence-only."<br><br><strong>Step 2:</strong> Introduce TCO. <em>Ask: "How many hours per pay period does your team spend reconciling absence data with payroll today? And how many hours after you switch to Red Rover?" The TCP partnership doesn't change this — Red Rover still has no native payroll integration. At 8 hours/cycle × 24 pay periods × $35/hr = $6,720/year in hidden labor cost — often wiping out the savings.</em><br><br><strong>Step 3:</strong> Future-proof the conversation. "In 3 years when you want integrated recruiting or PD tracking, what does the Red Rover upgrade path look like?" A TCP bundle isn't a platform. Frontline's total cost when you include future integrations is almost always lower.`,
 
-    "Red Rover demos better than us — what do we do?":
-      `Don't fight it — flip the script on what the demo is about.<br><br><strong>Before their demo:</strong> Plant the question: <em>"When you see the product today, pay close attention to how it handles payroll reconciliation and complex union leave rules — those are our biggest operational challenges."</em> Red Rover will struggle to answer both in their standard demo.<br><br><strong>In your own demo:</strong> Lead with the integration story first, not the UI. Show absence data flowing into payroll in real time. Show a complex FMLA scenario with union step-pay rules. Then show the mobile app — it's 4.5★ and just as clean. Sequence matters: once they've seen depth, the shiny UI alone isn't enough.`,
+    "Red Rover now claims all HCM — how do we respond?":
+      `Acknowledge the ambition, then test the depth.<br><br>"Red Rover has made real progress — the TCP partnership fills a time-clock gap, and their Learning Forward coaching tie-in is a start on PD. But 'all HCM' requires something they still don't have: <strong>a connected data model</strong>. Ask to see how a new hire flows from recruiting into onboarding into their time clock and payroll. With Red Rover + TCP, that's three systems, three logins, and manual handoffs at every seam."<br><br><em>Then offer the contrast: Frontline built its platform on a connected data architecture. Recruiting flows into Central (onboarding), which flows into Absence & Time, which connects to payroll. That's not a partnership — that's a platform.</em>`,
 
-    "What districts should we target that are currently on Red Rover?":
-      `Focus on districts hitting Red Rover's ceiling. Best signals: <br><br><em>1. Districts that recently negotiated a new CBA — they're about to discover the configurability gap.<br>2. Districts that have grown past 3,000 students or added new schools — complexity increases.<br>3. Districts where the payroll team is complaining about manual data entry at pay period close.<br>4. Districts that are adding HR staff — new HR directors often inherit Red Rover and immediately want more.</em><br><br>Check your SFDC for Red Rover accounts in the 2,000-8,000 student range coming up on 2-3 year contract renewals. Those are your warmest pipeline targets right now.`,
+    "How do we counter the TCP + Red Rover bundle pitch?":
+      `Three moves:<br><br><strong>1. Expose the seams.</strong> "A bundle is not an integration. Ask Red Rover to show how a substitute's hours in TCP automatically update their W-2 record and flow into your payroll run — end to end, no CSV. They can't."<br><br><strong>2. Challenge the CBA story.</strong> Red Rover's CBA configurability gaps don't go away because TCP is attached. For districts with complex union rules — step placement, extra duty pay, leave accrual — the combined solution hits the same walls.<br><br><em>3. TCO the bundle honestly. Red Rover + TCP typically results in two vendor contracts, two support channels, and two implementation timelines. Frontline is one contract, one CSM, one platform.</em>`,
 
-    "How do we talk about Red Rover's lack of payroll integration without sounding defensive?":
-      `Lead with a question, not a statement. Never say "Red Rover doesn't integrate with payroll" — say:<br><br><em>"Walk me through your current payroll reconciliation process. How does absence data get into your payroll system today, and how many steps does that take?"</em><br><br>Let them describe it. Then: "What we hear from districts that switch to Frontline is that this process goes from 8+ hours to about 20 minutes — because it's automatic. That's usually the moment the conversation changes." You didn't attack Red Rover. You asked a question and let the prospect sell themselves.`,
+    "How do we discuss the Corona-Norco USD loss without sounding defensive?":
+      `Own it, contextualize it, redirect.<br><br>"Corona-Norco is a real win for Red Rover — we're not dismissing it. They wanted a faster, lighter experience for a specific use case and Red Rover delivered that. What I'd want to know for your district is: what does Corona-Norco do when they want payroll integration, complex CBA rules, or full HCM analytics?"<br><br><em>Then pivot: "The districts that have come back to Frontline from Red Rover came back when they hit the walls: payroll reconciliation pain, CBA configurability limits, and the realization they'd need to start over to get a full HCM suite. We can connect you with those references directly."</em>`,
 
     "What's our best one-liner to differentiate from Red Rover?":
       `<strong>"Red Rover fills the sub spot. Frontline manages the person."</strong><br><br>It's short, memorable, and positions at the right level. Follow it with: "Red Rover is excellent at the transaction — job posted, sub filled, done. Frontline is about what happens before and after that transaction: who's in your sub pool, why absences are trending up in Building 4, how this connects to your payroll run, and what you're doing to retain the staff who are absent too often." It reframes the comparison from UI to strategy.`,
 
-    "How do we counter Red Rover's 'built for modern educators' messaging?":
-      `Acknowledge it, then elevate it. "Modern means different things to different people. For a substitute coordinator, modern means a great mobile app — and both products deliver that. For a superintendent, modern means data-driven decisions and a staff experience that reduces turnover. That's where Frontline goes further." Then show the analytics layer and the workforce planning dashboard. Modernity isn't just UX — it's insight.`,
-  }
+    "How do we counter Red Rover's 13-second support response claim?":
+      `Validate it, then reframe what support means.<br><br>"A 13-second response time sounds great — and for simple questions, it is. But let's talk about what happens when you have a complex CBA configuration issue, a payroll integration problem, or a custom reporting request. Those aren't chat-window questions."<br><br><em>Then offer Frontline's model: "Frontline provides a dedicated named Customer Success Manager — someone who knows your district, your contract, your bargaining agreement. When something complex breaks, you want an expert who knows your setup, not a fast response from someone starting from zero."</em>`,
+  },
+  win_back: {
+    headline: "THE BOOMERANG EFFECT: Why Districts Return to Frontline from Red Rover",
+    context: "Frontline has documented multiple cases where districts departed for Red Rover, then returned to Frontline within 12-24 months. The pattern is consistent: they leave for Red Rover's UX/speed promise, they return when structural limitations become critical in production. This is a powerful reference and objection-handling strategy.",
+    typical_timeline: {
+      month_0_to_3: "Decision: District chooses Red Rover for mobile-first experience, faster implementation, lower cost, and dissatisfaction with Frontline's legacy UX.",
+      month_3_to_6: "Implementation: Red Rover deployment is fast and smooth. Excitement is high. Substitutes love the mobile app. Leadership is pleased with the quick win.",
+      month_6_to_12: "Production Reality: Payroll reconciliation labor begins accumulating. HR team is manually exporting CSVs and reconciling absence hours every pay period — eating 6-10 hours per cycle. CBA configurability hits walls with union rules. Absence analytics are limited; HR director can't answer questions about absence trends by building. No path to connect recruiting/onboarding/PD.",
+      month_12_to_18: "Pain Onset: The $10K-18K annual payroll reconciliation cost becomes visible. Union reps complain about CBA configuration gaps. HR director realizes Red Rover is a point solution, not a platform. Renewal pricing conversation surfaces whether this was a good investment. District begins competitive re-evaluation.",
+      month_18_to_24: "Return to Frontline: District re-evaluates Frontline. Discovers payroll integration has no manual reconciliation burden. Realizes Frontline's CBA depth handles their union agreement natively. Sees the path to integrated recruiting/onboarding/PD. Either returns as an existing customer or replaces Red Rover with Frontline.",
+    },
+    talking_points: [
+      {
+        headline: "Red Rover works great... until it doesn't.",
+        body: "The first 6-9 months are golden. Fast implementation, excited users, great mobile experience. But here's what happens next: you realize absence data doesn't flow to payroll. Every pay period your HR team is manually reconciling. You hit walls with your union's complex CBA rules. Your HR director asks 'How many teachers are absent in Building 4 by reason?' and Red Rover can't answer it. That's when the true cost of a point solution becomes real.",
+        scenario: "Best used when prospect says: 'We're just trying Red Rover for a year' or 'We want something simple and modern.'"
+      },
+      {
+        headline: "We have references who tried Red Rover and came back.",
+        body: "Frontline has worked with districts who switched to Red Rover and returned within 18-24 months. Not because Red Rover is bad software — it's not. But because a point solution works great for filling subs and breaks when you need it to connect to everything else. We can connect you with those references directly. They can tell you exactly what they hit and why they returned.",
+        scenario: "Use when prospect is seriously evaluating Red Rover. This is credibility ammunition: 'You're not the first to ask this. Let me introduce you to someone who walked this path.'"
+      },
+      {
+        headline: "The payroll reconciliation cost is a hidden killer.",
+        body: "Red Rover's pricing looks 25-35% cheaper than Frontline. That's true upfront. But every month your HR team is exporting CSVs, uploading them to payroll, and manually verifying that absence hours match sub pay records. Most districts don't account for this labor until month 8-10, when a finance person says 'Wait, we're spending $800-1,500/month in HR time on this?' At $35/hr admin rate, that's $10K-18K annually — often exceeding the price difference entirely. Frontline's payroll integration eliminates that burden from day one.",
+        scenario: "Deploy this whenever price comes up. It reframes the entire ROI conversation."
+      },
+      {
+        headline: "Point solutions don't age well in K-12.",
+        body: "Year 1, Red Rover is your absence solution. Year 2, you want to integrate recruiting — they have no recruiting module. Year 3, you want professional development connected to absence data — Red Rover can't do it. Year 4, you want compliance reporting that ties attendance to evaluations — you're back at the drawing board. Frontline was built as a platform with this path already defined. When you're ready to expand, you don't re-implement.",
+        scenario: "Use in strategic conversations with superintendents or CFOs. This is about total cost of ownership and avoiding the 're-implementation tax.'"
+      },
+      {
+        headline: "Complex CBAs + Red Rover = reconciliation nightmare.",
+        body: "If your district has a complex union agreement with step-based pay, multiple job situations, FMLA tracking, and variable sub rates, Red Rover will hit configurability walls within 6 months. You'll either live with workarounds or face a re-implementation. Frontline's CBA logic handles every K-12 union scenario natively. We've been building this for 25+ years. Red Rover is 5 years into it. That experience gap is real.",
+        scenario: "Lead with this immediately if you know the prospect has an active union."
+      },
+    ],
+    boomerang_reference_strategy: {
+      setup: "When a prospect says they're considering Red Rover, here's the reference approach:",
+      step_1: "Acknowledge the appeal: 'Red Rover's UX and speed are legitimate advantages. That's why they've won. Here's what I'd want you to know.'",
+      step_2: "Tell the boomerang story: 'We have customers who switched to Red Rover 18 months ago. They loved it at first. But when they hit payroll integration gaps and CBA configurability limits in production, they came back. I'd like to introduce you to them — they can tell you exactly what they hit and when they knew Red Rover wasn't the long-term answer.'",
+      step_3: "Give them the choice: 'You can either learn this from them now, or learn it 18 months from now when you're facing a re-implementation. We recommend the first path.'",
+      step_4: "Offer the escape hatch: 'And if you do go with Red Rover and hit these walls like others have, we have a clear migration path to bring your data back. It's not painless, but it's doable.'",
+    },
+    objection_handlers: {
+      "We want to try Red Rover for a year and see how it goes.": {
+        reframe: "That's reasonable. But here's what typically happens: the first year goes great. Year 2 is when the structural limitations surface. By then you've sunk implementation costs, trained everyone, and changing systems is expensive. The time to ask hard questions about payroll integration, CBA depth, and suite expansion is now — before you're locked in.",
+        talking_point: "Instead of a 1-year pilot with Red Rover, how about a 3-month evaluation alongside Frontline? Meet with our CBA specialist, run a payroll integration scenario, and see what the full picture looks like. If Red Rover is still the answer after that, you've made a more informed decision."
+      },
+      "Red Rover's mobile app is so much better than Frontline's.": {
+        reframe: "The mobile experience is genuinely better — we acknowledge that. Substitutes do prefer Red Rover's app. But here's what we see: substitutes care about getting jobs filled quickly. Frontline's app does that. What we see in boomerang cases is that HR directors care about something different: does absence data flow to payroll without manual work? Can I answer why Building 4 has high absence? Will this system support our district's growth? That's where Red Rover hits walls.",
+        talking_point: "Side-by-side, Red Rover wins the mobile UX demo. But in a board meeting 18 months in, when finance is asking 'Why is our HR team spending 40 hours per month on payroll reconciliation?', that mobile app doesn't answer the question. We need both — great UX and operational integration. We have both."
+      },
+      "Red Rover's implementation is 2 months; Frontline's is 6 months.": {
+        reframe: "That's true for absence-only. Red Rover is fast because they're implementing one module. When boomerang customers come back, they want recruiting, onboarding, PD, analytics — the full suite. That implementation is longer. But here's the key: you're not doing three separate implementations. You're doing one integrated implementation where absence data automatically flows into the rest of the system.",
+        talking_point: "If you're just doing absence-only for the next 18 months, Red Rover's speed is an advantage. If you have a 3-5 year vision for integrated HCM, you're better off doing the longer implementation once rather than doing a fast Red Rover implementation and then a painful re-implementation later."
+      },
+      "Our CFO loves Red Rover's pricing.": {
+        reframe: "Your CFO is looking at license fees. Your HR director will be looking at labor costs. Introduce both to the payroll reconciliation analysis. When a $25/user, 100-user district discovers they're spending $12K+ annually in manual payroll reconciliation labor, the cost equation changes dramatically. Frontline's pricing + integrated payroll = often lower TCO.",
+        talking_point: "Show us the Red Rover contract. We'll run a side-by-side TCO that includes implementation, licensing, and payroll reconciliation labor. Most of the time, Frontline's TCO is equal or lower. If it's not, let's understand why and talk about it openly."
+      },
+      "Red Rover is modern, Frontline feels legacy.": {
+        reframe: "Modern UX is table stakes. Frontline has invested heavily in modernization too. But the real question is: does modern deliver better outcomes? We measure success not by UI ratings, but by districts that stay with us because we solve their business problems long-term. Red Rover wins on first impression. We win on 24-month satisfaction. Ask Red Rover for a reference from a district that switched 2+ years ago. Most districts we talk to that tried Red Rover come back within 18-24 months when the operational limitations hit.",
+        talking_point: "Modern and fresh are great for the first 6 months. But when you're running an actual school district with complex payroll, union agreements, compliance requirements, and multi-year HCM strategy, you need both modern AND reliable. We have both. Red Rover has modern. When they hit their first real crisis, they'll learn what 'reliable' means."
+      },
+      "Red Rover's integrations are more extensive.": {
+        reframe: "They have more integration partners listed because they partner with everything. But what does integration actually mean? For most Red Rover integrations, it means a CSV export and manual upload to your other systems. That's not integration — that's a workaround. Real integration is bidirectional, real-time data flow. Our payroll integrations are real integrations. Most of theirs are file exports.",
+        talking_point: "Ask them: When absence data is recorded in Red Rover, does it automatically sync to your payroll system in real-time, or do you export a CSV and manually upload it every pay period? If they say CSV and manual upload, then ask us the same question about Frontline + your payroll. The answer will be: automated, real-time, zero manual steps. That's the difference between integration breadth and integration depth."
+      },
+      "Red Rover is a newer, fresher company.": {
+        reframe: "Newer doesn't always mean better. Fresher means they haven't solved K-12's hardest problems yet. Frontline has 25+ years of playbook for union negotiations, complex payroll, state reporting, and regulatory compliance. K-12 HCM is not a commodity — every district's union agreement, payroll structure, and compliance requirements are different. When your district faces a crisis, you want a vendor that's solved similar problems 500+ times before.",
+        talking_point: "There's a cost to being the learning customer. Red Rover is bright, fast, and modern. But when they encounter their first complex union CBA they've never seen, or a state reporting requirement they don't understand, or a payroll reconciliation disaster at month 12, they'll be learning. Frontline has a 25-year playbook for every one of those situations. In K-12, experience matters."
+      },
+    },
+    when_to_deploy: [
+      "Prospect has mentioned Red Rover as a serious option",
+      "Prospect seems excited about Red Rover's UX/speed",
+      "Deal cycle is in discovery/evaluation phase (not yet signed)",
+      "District has complex union agreement (predicts payroll reconciliation pain)",
+      "District has mentioned desire for integrated HCM (recruiting, PD, etc.)",
+      "You have access to a boomerang customer reference who can speak to the experience",
+    ],
+    reference_qualifications: "Ideal boomerang references should:",
+    ref_criteria: [
+      "Have switched from Frontline to Red Rover",
+      "Have returned to Frontline or are in process of returning (or can explain why they stayed with Red Rover)",
+      "Can speak to specific pain points they hit (payroll reconciliation, CBA gaps, analytics limitations)",
+      "Are willing to have follow-up conversations with prospects considering Red Rover",
+      "Can discuss timeline: when they left, what they discovered, when they realized the gap, decision to return",
+    ]
+  },
+  // End win_back section
 },
-
-// ── POWERSCHOOL ────────────────────────────────────────────────────
 powerschool: {
   name: "PowerSchool",
-  tagline: "Unified Talent · Full K-12 HCM Suite",
+  tagline: "Unified Talent · Full K-12 HCM Suite · Leading Competitor Across All FL Pillars",
   threat: "HIGH", threat_class: "threat-high",
-  updated: "6 hours ago",
-  sources: "Website · G2 · Press Releases · LinkedIn",
+  updated: "Feb 2026",
+  sources: "Website · G2 · Press Releases · LinkedIn · Competitive Intel Summary Feb 2026",
   stats: [
-    { value:"15K+",  label:"Districts",       color:"var(--red)" },
-    { value:"3.8★",  label:"G2 Rating",       color:"var(--amber)" },
-    { value:"$2.8B", label:"Valuation",       color:"var(--text-primary)" },
-    { value:"VISTA", label:"PE Ownership",    color:"var(--text-muted)" },
+    { value:"15K+",   label:"Districts",         color:"var(--red)" },
+    { value:"3.8★",   label:"G2 Rating",         color:"var(--amber)" },
+    { value:"$5.6B",  label:"Bain Acq. (2024)",  color:"var(--text-primary)" },
+    { value:"PRIVATE",label:"Bain Capital PE",   color:"var(--text-muted)" },
   ],
-  summary: "PowerSchool is Frontline's most formidable suite competitor, leveraging dominant SIS market share to cross-sell Unified Talent (HCM). Their 'one platform' pitch resonates with IT-stretched district administrators. However, their post-acquisition product integration is shallow, support quality has collapsed since 2023 layoffs, and renewal pricing is up 30-40% — creating significant displacement opportunities. Win the HCM-only deals by attacking their integration reality vs. their integration narrative.",
+  summary: "PowerSchool is Frontline's most comprehensive competitive threat — the only competitor that competes across ALL Frontline pillars and segments simultaneously. Taken private by Bain Capital in 2024 for ~$5.6 billion, PowerSchool is well-capitalized and pursuing aggressive growth. Their 'one platform' pitch (SIS + HCM + ERP + Analytics) resonates strongly with IT-stretched administrators and CFOs who want consolidated vendors. Their nationwide footprint, stronger state selling motion, and lower price point for most districts are real advantages. Frontline wins on A&T reporting depth, enhanced R&H configurability, Proactive Recruitment, and the deepest pool of K-12 clients and job seekers. Win strategy: separate the HR buyer from the IT buyer, attack their integration reality vs. their integration narrative, and lead with Frontline's purpose-built K-12 HR depth.",
   strengths: [
-    { text:"SIS installed base creates powerful cross-sell leverage — 'we're already in your district, adding HR is easier'", conf:"high" },
-    { text:"Brand recognition: most district administrators have used PowerSchool — familiarity reduces switching cost narrative", conf:"high" },
-    { text:"'One vendor' narrative resonates with CFOs and IT directors who want consolidated vendor relationships", conf:"high" },
-    { text:"Launched PowerSchool Copilot AI — getting ahead of AI narrative; sales teams are actively using it in demos", conf:"med" },
+    { text:"Nationwide footprint across ALL Frontline pillars — SIS, HCM, ERP, Analytics, PD; the only competitor that can replace Frontline everywhere", conf:"high" },
+    { text:"Strong state selling motion — better integration with state reporting infrastructure in many states; Bain Capital backing ($5.6B) enables aggressive investment", conf:"high" },
+    { text:"Lower price point for most districts — consistently undercutting Frontline on initial license price across HCM modules", conf:"high" },
+    { text:"'One vendor' narrative resonates with CFOs and IT directors — PowerSchool Copilot AI adds AI-forward talking point in demos", conf:"high" },
+    { text:"SchoolSpring job board + ATS combination — strong recruiting footprint; SchoolSpring is the largest K-12 job board (though K12JobSpot has 1.7M seekers vs. SchoolSpring)", conf:"med" },
   ],
   weaknesses: [
     { text:"G2 support scores fell from 4.1 to 3.8 in 90 days after 600 CS reps were laid off in Q3 2023", conf:"high" },
@@ -1155,10 +1299,11 @@ powerschool: {
     ]
   },
   moves: [
-    { date:"JAN 2024", type:"threat", icon:"⚠️", title:"PowerSchool Copilot Beta Expanded", desc:"AI assistant now in beta with 500+ districts. Limited to SIS data currently but roadmap includes HR data integration by Q4 2024." },
-    { date:"NOV 2023", type:"opportunity", icon:"✅", title:"Renewal pricing spike confirmed", desc:"AE team confirmed 30-40% renewal increases via 3 separate customer advisory board sources. Actively triggering RFPs — warmest competitive pipeline signal of the year." },
-    { date:"SEP 2023", type:"opportunity", icon:"✅", title:"600 CS layoffs — support scores collapse", desc:"G2 rating dropped 0.3 points in 90 days. Support ticket response time grew from 4hrs to 2+ days. Prime time to lead with Frontline's dedicated success model." },
-    { date:"JUL 2023", type:"neutral", icon:"📣", title:"New CRO hired from Workday", desc:"Enterprise sales motion intensifying. Expect more sophisticated competitive deals in 5K+ student districts — Frontline's core market." },
+    { date:"2024", type:"threat", icon:"⚠️", title:"Taken Private by Bain Capital — $5.6B", desc:"PowerSchool delisted from NASDAQ and taken private by Bain Capital for ~$5.6B in 2024. This is not a retrenchment — it's a bet on aggressive growth. Expect accelerated product investment, M&A, and more sophisticated competitive tactics across all Frontline segments." },
+    { date:"2025", type:"threat", icon:"⚠️", title:"Competing Across All Frontline Pillars", desc:"Feb 2026 Competitive Intel Summary explicitly flags PowerSchool as the leading competitor across ALL Frontline pillars and all segments — HCM, Student, Business, and Data & Analytics. No other single competitor covers this breadth." },
+    { date:"JAN 2024", type:"threat", icon:"⚠️", title:"PowerSchool Copilot AI Expanded", desc:"AI assistant now widely deployed. Limited to SIS data — cannot surface HR insights — but sales teams are using it aggressively in demos. Frontline's AI response (Dear Future initiative, K-12 AI Advisory Council) launched August 2025." },
+    { date:"NOV 2023", type:"opportunity", icon:"✅", title:"Renewal Pricing Spike Confirmed", desc:"AE team confirmed 30-40% renewal increases via multiple customer advisory board sources. Actively triggering RFPs — warmest competitive pipeline signal. Bain ownership may intensify pricing pressure further." },
+    { date:"SEP 2023", type:"opportunity", icon:"✅", title:"600 CS Layoffs — Support Scores Collapsed", desc:"G2 rating dropped from 4.1 to 3.8 in 90 days. Support ticket response time grew from 4hrs to 2+ days. Lead with Frontline's dedicated CSM model — and Frontline's new Chief Customer Officer (April 2025) signals investment in this advantage." },
   ],
   suggested_qs: [
     "How do we beat PowerSchool when they're already the SIS vendor?",
@@ -1291,105 +1436,310 @@ subcentral: {
   }
 },
 
-// ── APPLITRACK ─────────────────────────────────────────────────────
+// ── HIRE+ (APPLITRACK) ─────────────────────────────────────────────
 applitrack: {
-  name: "AppliTrack / Hire+",
-  tagline: "K-12 Talent Acquisition · Applicant Tracking",
+  name: "Hire+ (formerly AppliTrack)",
+  tagline: "Talent Acquisition · ATS · All Hiring Segments",
   threat: "MEDIUM", threat_class: "threat-med",
-  updated: "1 day ago",
-  sources: "Website · G2 · News",
+  updated: "Feb 2026",
+  sources: "Website · G2 · Competitive Intel Summary Feb 2026",
   stats: [
-    { value:"500+",  label:"Districts",       color:"var(--text-primary)" },
-    { value:"3.2★",  label:"G2 Rating",       color:"var(--red)" },
-    { value:"~10%",  label:"ATS Market",      color:"var(--amber)" },
-    { value:"PRIVATE",label:"Ownership",      color:"var(--text-muted)" },
+    { value:"3K+",    label:"K-12 Districts",      color:"var(--text-primary)" },
+    { value:"3.2★",   label:"G2 Rating",           color:"var(--red)" },
+    { value:"MED",    label:"Threat Level",         color:"var(--amber)" },
+    { value:"PRIVATE",label:"Ownership",            color:"var(--text-muted)" },
   ],
-  summary: "AppliTrack (rebranded to Hire+) competes with Frontline's Recruiting product as a narrow K-12 ATS. Threat level is medium — they're a point solution without broader HCM ambition and their product is visibly dated. G2 reviews consistently cite poor candidate mobile experience and slow time-to-hire. The primary play is displacing AppliTrack as part of a Frontline HCM suite conversation — rarely a standalone recruiting battle.",
+  summary: "Hire+ (rebranded from AppliTrack in Q4 2023) competes across all hiring segments against Frontline Recruiting & Hiring. Frontline wins decisively on the depth of the K-12 job seeker pool (K12JobSpot's 1.7M+ registered job seekers), SOC-2 compliance, and Proactive Recruitment capabilities. Their key vulnerability: a visibly dated mobile experience and zero path from ATS to full HCM. The displacement moment is almost always a new HR Director or Superintendent asking 'why is our time-to-hire so high?' — and realizing AppliTrack has no answer.",
   strengths: [
-    { text:"K-12 specific ATS — not a generic HR tool adapted for education; some workflow familiarity with long-tenure HR staff", conf:"high" },
+    { text:"K-12 specific workflows with incumbency advantage — long-tenure HR admins who know the workarounds protect it", conf:"high" },
     { text:"Low price point — entry-level ATS for districts with simple, low-volume hiring needs", conf:"high" },
-    { text:"Incumbency advantage — HR admins who've used it for years resist change even when product is dated", conf:"med" },
+    { text:"Established presence across all hiring segments — has meaningful district count and name recognition", conf:"med" },
   ],
   weaknesses: [
-    { text:"No onboarding, HR, or absence integration — pure ATS creates disconnected candidate-to-employee experience", conf:"high" },
-    { text:"UI not meaningfully updated in 5+ years per user reviews — candidate experience is visibly dated on mobile", conf:"high" },
-    { text:"G2 rating 3.2 — consistent complaints about slow candidate application flow losing applicants to competing districts", conf:"high" },
-    { text:"No AI screening, matching, or candidate scoring — fully manual review process", conf:"high" },
-    { text:"Rebranded to Hire+ with no significant product changes — signals cosmetic refresh over investment", conf:"med" },
+    { text:"No onboarding, HR, or absence integration — pure ATS creates disconnected candidate-to-employee experience; no path to full HCM suite", conf:"high" },
+    { text:"Mobile candidate experience is weak — consistent G2 complaints about application abandonment on phone; districts lose candidates mid-apply in a shortage market", conf:"high" },
+    { text:"No AI screening, matching, or candidate scoring — fully manual review process vs. Frontline's AI scoring and proactive recruitment", conf:"high" },
+    { text:"Rebranded to Hire+ with no significant product investment — cosmetic refresh signals marketing over R&D", conf:"med" },
+    { text:"Not SOC-2 compliant — Frontline leads with SOC-2 compliance as a differentiator in all hiring segment deals", conf:"high" },
   ],
   positioning: [
     { text:"K-12 specialist positioning — 'built for how schools hire'; relies on familiarity, not innovation", conf:"high" },
-    { text:"Price and simplicity — targeting districts that want low-touch, low-cost ATS without broader ambition", conf:"high" },
+    { text:"Price and simplicity — targeting districts that want low-touch, low-cost ATS without broader HCM ambition", conf:"high" },
   ],
   traps: [
     {
       q: '"When a candidate is hired, show me how they flow automatically into onboarding, new hire paperwork, and payroll setup."',
-      why: "AppliTrack is ATS-only. <strong>There is no automatic onboarding handoff.</strong> The answer involves manual data re-entry or an IT integration project. Frontline's recruiting-to-onboarding flow is seamless and automated."
+      why: "Hire+ is ATS-only. <strong>There is no automatic onboarding handoff.</strong> The answer involves manual data re-entry or an IT integration project. Frontline's recruiting-to-Central onboarding flow is seamless and automated — no reentry required."
     },
     {
-      q: '"Can a candidate apply for an open position from their phone in under 3 minutes?"',
-      why: "AppliTrack's mobile application flow receives consistent 1-2 star reviews for mobile UX. <strong>Many candidates abandon the process.</strong> In a teacher shortage market, a broken apply flow costs districts quality candidates."
+      q: '"Can a candidate apply for an open position from their phone in under 3 minutes — without creating an account first?"',
+      why: "Hire+'s mobile application flow receives consistent 1-2 star reviews. <strong>Many candidates abandon mid-process.</strong> In a teacher shortage market, a broken apply experience directly costs districts quality hires. Frontline's mobile-first apply is fast, frictionless, and completes on any device."
     },
     {
-      q: '"How does your system help your team prioritize the best-fit candidates from 200 applications without reading every resume?"',
-      why: "AppliTrack has no AI candidate scoring or auto-screening. <strong>It's a fully manual review queue.</strong> Frontline's AI scoring surfaces best-fit candidates automatically, saving 5-8 hours per posting for a 3-person HR team."
+      q: '"Is your platform SOC-2 certified — and can you share your compliance documentation?"',
+      why: "Frontline is SOC-2 compliant. <strong>Hire+ is not.</strong> This is an increasingly important procurement requirement for districts that take candidate data seriously — and a clean disqualifier when it's required."
     },
   ],
   talking_points: [
     {
+      headline: "Frontline has the deepest pool of K-12 job seekers — by far.",
+      body: "K12JobSpot has 1.7 million registered K-12 job seekers and facilitates 9.6 million+ applications annually. That's not software — that's network. Your job postings reach more qualified candidates on day one with Frontline than any competitor can match."
+    },
+    {
       headline: "Every day a position stays open costs you real dollars.",
-      body: "In a teacher shortage, time-to-hire is an existential metric. Districts on Frontline Recruiting fill positions 40% faster on average because of AI scoring, automated references, and a mobile-first application that doesn't lose candidates mid-flow. AppliTrack's manual process can't keep up."
+      body: "In a teacher shortage, time-to-hire is existential. Districts on Frontline Recruiting fill positions faster because AI scoring, Proactive Recruitment, and automated references eliminate the manual bottlenecks. Hire+'s manual review queue can't keep up with that cadence."
     },
     {
       headline: "Hiring is step one. Onboarding is where you lose new hires.",
-      body: "AppliTrack gets the signature on the offer letter — then what? New hire paperwork, I-9, benefits enrollment, and credential verification are manual and disconnected. Frontline's onboarding automation means new teachers are enrolled, credentialed, and ready before day one — not scrambling through stacks of paper."
-    },
-    {
-      headline: "A candidate who can't apply from their phone goes to the next district.",
-      body: "AppliTrack's application flow is not competitive on mobile. In a market where districts compete for the same teacher talent, a broken apply experience is a direct recruiting disadvantage. Frontline's mobile-first application takes under 3 minutes and completes on any device."
+      body: "Hire+ gets the offer signed — then what? New hire paperwork, I-9, benefits enrollment, credential verification are manual and disconnected. Frontline's onboarding automation means new teachers are enrolled, credentialed, and ready before day one — not scrambling through stacks of paper on their first morning."
     },
   ],
   battlecard: {
     their_strengths: [
       "K-12 familiar workflows — long-tenure HR staff comfort",
       "Low price for simple ATS needs",
-      "Incumbent inertia in smaller districts",
+      "Incumbent inertia across hiring segments",
     ],
     our_wins: [
-      "AI candidate scoring — best-fit surfaces automatically",
-      "Mobile-first application — 3-min apply, any device",
-      "Recruiting → Onboarding → HR automation — no data re-entry",
-      "Automated reference checks — hours saved per hire",
-      "Active product investment — quarterly feature releases",
+      "K12JobSpot — 1.7M+ K-12 job seekers; 9.6M+ annual applications",
+      "SOC-2 compliant — Hire+ is not; increasing procurement requirement",
+      "AI candidate scoring + Proactive Recruitment — not available in Hire+",
+      "Mobile-first application that actually works on phones",
+      "Recruiting → Central onboarding → Absence → PD: one connected data flow",
     ],
     position: [
-      "AppliTrack gets applications. Frontline fills positions faster — with better candidates, and gets them fully onboarded.",
-      "In a teacher shortage, time-to-hire and candidate experience are competitive advantages. AppliTrack can't deliver either.",
-      "The real cost of AppliTrack is the positions you lose because candidates dropped off on mobile.",
+      "Frontline has the deepest K-12 job seeker pool and is SOC-2 compliant. Hire+ has neither.",
+      "In a teacher shortage, recruiting software is a talent competitive advantage — not just an admin tool.",
+      "The real cost of Hire+ is the candidates you lose to the district that gets back to them 40% faster.",
     ]
   },
   moves: [
-    { date:"Q4 2023", type:"neutral", icon:"📣", title:"Rebranded to Hire+", desc:"Full rebrand with new website. No significant product changes announced. Signals marketing investment over product investment — a cosmetic refresh." },
-    { date:"Q3 2023", type:"opportunity", icon:"✅", title:"3 districts converted to Frontline Recruiting", desc:"Districts cited mobile candidate experience and AI scoring as primary drivers. Strong reference story available for similar mid-size districts." },
+    { date:"Q4 2023", type:"neutral", icon:"📣", title:"Rebranded to Hire+", desc:"Full rebrand with new website. No significant product changes announced. Signals marketing investment over product investment — a cosmetic refresh with no new hiring capabilities." },
+    { date:"2025", type:"opportunity", icon:"✅", title:"SOC-2 Compliance Gap Confirmed", desc:"Feb 2026 intel confirms Frontline's SOC-2 certification is a consistent differentiator vs. Hire+ in all hiring segment deals. Raise this proactively in any district with a formal security review process." },
   ],
   suggested_qs: [
-    "How do we displace AppliTrack in districts where they're entrenched?",
-    "What's our AI recruiting story vs. their manual ATS?",
-    "How do we make the case for a full suite when they only want an ATS?",
+    "How do we displace Hire+ in districts where they're entrenched?",
+    "How do we lead with the K12JobSpot job seeker pool advantage?",
+    "How do we use SOC-2 compliance as a differentiator vs. Hire+?",
     "What's the teacher shortage angle for Frontline Recruiting?",
   ],
   qa: {
-    "How do we displace AppliTrack in districts where they're entrenched?":
-      `Target the new hire, not the incumbent user.<br><br>Long-tenure HR admins who've used AppliTrack for years are the defenders — they know the workarounds and resist change. The trigger is usually:<br><br><em>1. <strong>New HR Director or Superintendent hired</strong> — first question: "What's our time-to-hire and why is it so long?"<br>2. <strong>Visible candidate drop-off on mobile</strong> — pull the data: what % of applicants start but don't finish the application? AppliTrack districts typically see 40-60% abandonment on mobile.<br>3. <strong>Unfilled positions crisis</strong> — when a district can't fill 20+ positions, the incumbent tool becomes easy to challenge.</em><br><br>Lead with a time-to-hire benchmark: "Districts on Frontline Recruiting fill positions 40% faster. Given the current shortage, what would 40% faster mean for your open roles?"`,
+    "How do we displace Hire+ in districts where they're entrenched?":
+      `Target the new hire, not the incumbent user.<br><br>Long-tenure HR admins who've used Hire+ for years are the defenders. The displacement trigger is almost always:<br><br><em>1. <strong>New HR Director or Superintendent</strong> — first question: "Why is our time-to-hire so high?"<br>2. <strong>Unfilled positions crisis</strong> — when a district can't fill 15+ roles, the incumbent tool becomes easy to challenge.<br>3. <strong>Security audit or compliance review</strong> — SOC-2 compliance requirement immediately surfaces Hire+'s gap.</em><br><br>Lead with the job seeker pool: "K12JobSpot has 1.7 million registered K-12 job seekers. How many does Hire+ have access to?"`,
 
-    "What's our AI recruiting story vs. their manual ATS?":
-      `Keep it concrete and tied to their pain.<br><br>"When your team has 200 applications for a special ed position and 3 people to review them, how long does that take? With AppliTrack — manually, every resume. With Frontline — AI scores every candidate against your defined criteria and surfaces the top 20 in a ranked list. Your team reviews 20 instead of 200. That's 8 hours back per posting."<br><br><em>Then show the AI scoring workflow in the demo — define the criteria live in front of them, post a fictional position, and show the ranked candidate list. It's the single most memorable moment in a Frontline Recruiting demo.</em>`,
+    "How do we lead with the K12JobSpot job seeker pool advantage?":
+      `Make it concrete and competitive.<br><br>"When you post a position on Frontline, it goes to 1.7 million registered K-12 job seekers immediately. You're not competing in a general job market — you're reaching people who have specifically said they want to work in K-12 education." <br><br><em>Then compare: "What network does Hire+ post to?" They'll describe a general ATS or a smaller pool. Then: "In a teacher shortage, the districts that fill positions fastest are the ones candidates hear from first — and that starts with who sees your posting."</em>`,
 
-    "How do we make the case for a full suite when they only want an ATS?":
-      `Don't fight the budget constraint — plant the future question.<br><br>"We can absolutely start with Recruiting. But before we scope that, let me show you what happens in month 3 when your first Frontline hire needs to complete onboarding. If you're on AppliTrack, you're re-entering that data manually. With Frontline, it flows automatically."<br><br><em>Then do a 10-minute onboarding demo — new hire checklist, I-9, benefits enrollment, credential upload. Ask: "What's your current onboarding process for a new teacher?" The answer is almost always painful enough to expand the conversation to the full suite naturally.</em>`,
+    "How do we use SOC-2 compliance as a differentiator vs. Hire+?":
+      `Lead with it as a risk question, not a feature.<br><br>"Before we go further, I want to flag something: do your procurement requirements include SOC-2 certification for vendors handling candidate data? We ask because Frontline is SOC-2 compliant — and Hire+ is not. If your district has a security review process, this comes up. Better to know now."<br><br><em>In most districts, this either ends the Hire+ conversation or at minimum plants a seed that grows during procurement. Raise it early, not late.</em>`,
 
     "What's the teacher shortage angle for Frontline Recruiting?":
-      `Make it about competitive recruiting, not just software.<br><br>"Your district is competing with every district in a 60-mile radius for the same teacher candidates. The districts winning that competition have two things: a fast apply experience and a fast decision process. AppliTrack loses candidates on mobile before they finish applying. Frontline's AI means you can make an offer 40% faster than your competitors."<br><br><em>The closer: "In a shortage market, recruiting software isn't an HR admin tool — it's a talent competitive advantage. The districts that fill their positions are the ones that respond fastest. Frontline is built for that race."</em>`,
+      `Make it about competitive recruiting speed, not software features.<br><br>"Your district is competing with every district in a 60-mile radius for the same candidates. The districts filling positions are the ones that respond fastest — and Frontline's AI scoring, Proactive Recruitment, and 1.7M job seeker pool give you a structural speed advantage Hire+ simply can't match."<br><br><em>Close with: "In a shortage market, recruiting software isn't an HR admin tool — it's a talent competitive advantage. Hire+ is a tool for a market where you get to be slow. That market is gone."</em>`,
+  }
+},
+
+// ── TIMECLOCKPLUS ──────────────────────────────────────────────────
+tcp: {
+  name: "TimeClockPlus",
+  tagline: "Time & Attendance · Red Rover Partner · K-12 Focused",
+  threat: "MEDIUM", threat_class: "threat-med",
+  updated: "Feb 2026",
+  sources: "Website · G2 · Competitive Intel Summary Feb 2026 · Red Rover Partnership Intel",
+  stats: [
+    { value:"K-12",   label:"Vertical Focus",      color:"var(--text-primary)" },
+    { value:"4.0★",   label:"G2 Rating",           color:"var(--amber)" },
+    { value:"MED",    label:"Threat Level",         color:"var(--amber)" },
+    { value:"PRIVATE",label:"Ownership",            color:"var(--text-muted)" },
+  ],
+  summary: "TimeClockPlus (TCP) is a K-12 time & attendance point solution that competes directly against Frontline Absence & Time. TCP's most significant competitive move is their Red Rover partnership — bundling T&A with absence management to offer a credible alternative to Frontline's integrated suite in the small-to-mid market. Frontline wins on better +/- time reconciliation, superior handling of multiple job situations, free mobile app, and the connectivity of T&A data to the full HCM suite. The TCP + Red Rover bundle creates real pipeline risk but has a structural ceiling: no payroll integration, no HCM suite expansion, and no CBA configurability depth.",
+  strengths: [
+    { text:"Pay-by-user model is attractive for small districts — lower upfront cost for districts with fewer employees", conf:"high" },
+    { text:"Red Rover partner — bundled absence + T&A solution now actively competing against Frontline's integrated Absence & Time offering", conf:"high" },
+    { text:"K-12 specific time & attendance — not a generic corporate tool; understands blended overtime, multiple job situations, and K-12 pay structures", conf:"med" },
+  ],
+  weaknesses: [
+    { text:"Weaker +/- time reconciliation than Frontline — Frontline specifically wins on superior time reconciliation handling", conf:"high" },
+    { text:"Multiple job situation handling is inferior — complex K-12 assignments (extra duty, split jobs, coaching stipends) hit walls", conf:"high" },
+    { text:"No payroll integration in Red Rover bundle — the absence + TCP solution still requires manual payroll reconciliation", conf:"high" },
+    { text:"No path to HCM suite — TCP is a point solution; districts that want recruiting, onboarding, or PD have to start over", conf:"high" },
+    { text:"Free mobile app is Frontline's counter — Frontline offers a free mobile app vs. TCP's app model", conf:"med" },
+  ],
+  positioning: [
+    { text:"K-12 T&A specialist — 'built for how schools track time'; pairs with Red Rover for absence bundling narrative", conf:"high" },
+    { text:"Pay-by-user model targets small districts — explicitly positioned against Frontline's per-employee pricing for smaller budgets", conf:"high" },
+  ],
+  traps: [
+    {
+      q: '"Show me how an employee clocking in for a coaching stipend at 6pm automatically calculates their extra duty pay differential and flows into payroll that same pay period."',
+      why: "TCP's multiple job situation handling is limited. <strong>Complex K-12 assignments with split rates hit gaps.</strong> Frontline handles blended overtime, gap time, weighted overtime, and split assignments natively — TCP cannot match this depth."
+    },
+    {
+      q: '"When a sub completes an assignment in Red Rover, how does that automatically update their hours in TCP — and then flow into your payroll system — without any manual steps?"',
+      why: "The Red Rover + TCP bundle has <strong>no native payroll connectivity</strong>. The answer involves exports or manual steps. Calculate the reconciliation cost — often $6,000-15,000/year in hidden admin labor that offsets the price advantage."
+    },
+    {
+      q: '"What does the mobile clock-in experience look like — and is there a free app for employees?"',
+      why: "Frontline offers a <strong>free mobile app</strong> for clock-in with contactless kiosk options. TCP's mobile model may include app fees. Side-by-side on a phone, Frontline wins the employee experience comparison."
+    },
+  ],
+  talking_points: [
+    {
+      headline: "TCP + Red Rover is a bundle, not a platform.",
+      body: "Two systems, two logins, two contracts, two support channels — and still no payroll connection. Frontline Absence & Time is one system with one data model, native payroll integration, and a path to the full HCM suite. A bundle is not an integration."
+    },
+    {
+      headline: "Frontline's time reconciliation is purpose-built for K-12 complexity.",
+      body: "Blended overtime, gap time, weighted overtime, split assignments, extra duty pay differentials — Frontline handles every K-12 pay complexity natively. TCP's multiple job situation handling is where customers hit walls, especially in districts with complex CBAs."
+    },
+    {
+      headline: "The free mobile app closes the experience gap.",
+      body: "Frontline's free mobile app handles clock-in, job notifications, and time review in one place — for substitutes and permanent staff. Don't let TCP win on price for the mobile experience. Side-by-side, Frontline's app wins on both UX and cost."
+    },
+  ],
+  battlecard: {
+    their_strengths: [
+      "Pay-by-user model — lower cost for small districts",
+      "Red Rover bundle — absence + T&A combo pitch",
+      "K-12 specific T&A knowledge",
+    ],
+    our_wins: [
+      "Superior +/- time reconciliation — Frontline's explicit advantage per intel",
+      "Multiple job situation handling depth — blended OT, split pay, extra duty",
+      "Free mobile app — contactless kiosk + mobile clock-in at no extra cost",
+      "Native payroll integration — no CSV exports, no reconciliation labor",
+      "Full HCM suite path — T&A data connected to recruiting, onboarding, PD, analytics",
+    ],
+    position: [
+      "TCP + Red Rover is a bundle. Frontline Absence & Time is a platform.",
+      "Frontline's T&A handles every K-12 pay complexity TCP hits walls on.",
+      "The real cost of TCP is the payroll reconciliation burden and the re-implementation you'll face when you want more than T&A.",
+    ]
+  },
+  moves: [
+    { date:"2025", type:"threat", icon:"⚠️", title:"Red Rover Partnership Announced — Bundle Now Active", desc:"TCP + Red Rover now actively bundled and sold as a combined solution targeting Frontline Absence & Time. Changes the competitive dynamic in the small-to-mid market. Anticipate this bundle in any deal where Red Rover is competing on absence." },
+    { date:"2025", type:"opportunity", icon:"✅", title:"Bundle Has No Payroll Connection", desc:"Confirmed: the TCP + Red Rover bundle still has no native payroll integration. The reconciliation burden remains. This is the TCO attack surface — run the calculation before any proposal goes out against this bundle." },
+  ],
+  suggested_qs: [
+    "How do we beat the TCP + Red Rover bundle on price?",
+    "What's our T&A depth story vs. TCP for complex CBA districts?",
+    "How do we counter the pay-by-user pricing model?",
+    "What's Frontline's free mobile app advantage over TCP?",
+  ],
+  qa: {
+    "How do we beat the TCP + Red Rover bundle on price?":
+      `Run the real TCO before you compete on license fee.<br><br>"TCP + Red Rover's combined license may look cheaper upfront. But here's what districts don't calculate: the payroll reconciliation labor. With no native payroll connection in the bundle, your team is exporting CSVs and manually reconciling at every pay period close. At 8 hours/cycle × 24 cycles × $35/hr = $6,720+/year in hidden cost — often exceeding the price difference with Frontline."<br><br><em>Then add: "With Frontline, time data flows directly to payroll. That reconciliation cost is zero. That's usually the moment the conversation changes."</em>`,
+
+    "What's our T&A depth story vs. TCP for complex CBA districts?":
+      `Lead with the specific scenario, then demo it.<br><br>"TCP handles standard time & attendance well. But K-12 is not standard — you have blended overtime, gap time, weighted overtime, split assignments, extra duty stipends, and multiple job situations all running simultaneously. Frontline was built for exactly this complexity."<br><br><em>In your demo: build a scenario with a paraprofessional who works a 6-hour split assignment, has a coaching stipend at 6pm, and crosses into blended overtime. Walk through how Frontline calculates it automatically. Then ask TCP to show the same scenario. The gap surfaces immediately.</em>`,
+
+    "How do we counter the pay-by-user pricing model?":
+      `Acknowledge it, then introduce the growth cost.<br><br>"TCP's pay-by-user model looks attractive today. But what happens when your district grows — new schools, more staff, more substitutes? The per-user cost scales with your headcount. Frontline's model doesn't penalize growth the same way."<br><br><em>Also surface the hidden cost: "What's the per-user rate for substitutes? For occasional paraprofessionals? Add those up for your district. The math often surprises people."</em>`,
+
+    "What's Frontline's free mobile app advantage over TCP?":
+      `Make it concrete in the room — demo it on your phone.<br><br>"Frontline's mobile app is free for every employee and substitute — clock-in, time review, job notifications, all in one place. Pull it up right now." Then show it. "What does TCP's mobile experience look like — and is there a cost per user for the app?"<br><br><em>Then tie it to the sub experience: "Your substitutes are also using this app to accept jobs. One app, one login, one experience. They're not switching between Red Rover and TCP — it all lives in Frontline."</em>`,
+  }
+},
+
+// ── KICKUP ────────────────────────────────────────────────────────
+kickup: {
+  name: "KickUp",
+  tagline: "Professional Growth · PD Platform · Red Rover Partner",
+  threat: "MEDIUM", threat_class: "threat-med",
+  updated: "Feb 2026",
+  sources: "Website · G2 · Competitive Intel Summary Feb 2026 · Red Rover Partnership Intel",
+  stats: [
+    { value:"PD",     label:"Focus Area",          color:"var(--text-primary)" },
+    { value:"4.2★",   label:"G2 Rating",           color:"var(--green)" },
+    { value:"MED",    label:"Threat Level",         color:"var(--amber)" },
+    { value:"PRIVATE",label:"Ownership",            color:"var(--text-muted)" },
+  ],
+  summary: "KickUp is a modern professional development platform that competes against Frontline Professional Growth. Their modern UX/UI and partnership with Red Rover for HCM creates a bundled PD story targeting districts already in the Red Rover ecosystem. KickUp also partners with Learning Forward for coaching — giving them credibility in the instructional coaching space. Frontline wins by connecting PD data to other HCM modules — when evaluation scores trigger PD recommendations, when absence patterns inform professional learning plans, and when PD completion data connects to contract renewal. KickUp cannot offer this closed-loop data model.",
+  strengths: [
+    { text:"Modern UX/UI — consistently rated higher on visual experience than Frontline Professional Growth (3.5/5 on G2)", conf:"high" },
+    { text:"Red Rover partner for HCM — bundled with Red Rover and Learning Forward for coaching; creates a competitive PD + absence story", conf:"high" },
+    { text:"Learning Forward partnership — credibility in instructional coaching and professional learning quality standards", conf:"med" },
+    { text:"Purpose-built for PD — not a module attached to an HCM suite; focused product attention vs. Frontline's suite breadth tradeoffs", conf:"med" },
+  ],
+  weaknesses: [
+    { text:"No connection to evaluation data — cannot trigger PD from evaluation results; the 'Learning Loop' that connects evaluation to professional growth is Frontline's unique capability", conf:"high" },
+    { text:"No connection to HCM data — absence patterns, turnover signals, and compensation data don't inform PD planning in KickUp", conf:"high" },
+    { text:"No Danielson Framework integration — Frontline's evaluation management supports Danielson 2011/2013/2022 natively; KickUp's evaluation support is limited", conf:"high" },
+    { text:"PD-only point solution — districts that want evaluation management, PD, and coaching in one connected system have to add additional vendors to KickUp", conf:"high" },
+  ],
+  positioning: [
+    { text:"Modern coaching-first PD platform — 'professional learning that actually sticks'; positions against Frontline's legacy MyLearningPlan-era reputation", conf:"high" },
+    { text:"Learning Forward brand alignment — signals PD quality and research grounding vs. Frontline's content volume story", conf:"med" },
+    { text:"Part of the Red Rover ecosystem — now positioned as the PD layer in a Red Rover + TCP + KickUp 'modern HCM alternative' narrative", conf:"med" },
+  ],
+  traps: [
+    {
+      q: '"When a teacher receives a low score on their Danielson Framework evaluation, how does that automatically generate a personalized PD recommendation?"',
+      why: "This is Frontline's 'Learning Loop' — and KickUp cannot replicate it. <strong>KickUp has no evaluation data connection.</strong> The answer will involve a manual process or a separate evaluation system. Demo the Learning Loop immediately after this question."
+    },
+    {
+      q: '"How does your PD data connect to your HR records — so when a teacher completes a credential renewal course, that automatically updates their credential file?"',
+      why: "KickUp is PD-only. <strong>There is no automatic HR record update.</strong> Frontline's Central module receives PD completion and credential data automatically. In districts where credential tracking is compliance-critical, this gap is disqualifying."
+    },
+    {
+      q: '"Show me how you support Danielson Framework 2022 edition — including the updated domains and evidence collection."',
+      why: "Frontline's evaluation management was built around Danielson — including the 2011, 2013, and 2022 editions. KickUp's evaluation support is limited. <strong>The Danielson question quickly surfaces which product was purpose-built for K-12 evaluation.</strong>"
+    },
+  ],
+  talking_points: [
+    {
+      headline: "The Learning Loop is what makes PD stick — and only Frontline has it.",
+      body: "When a teacher's evaluation shows a growth area, Frontline automatically surfaces relevant PD recommendations from your catalog. When they complete the PD, it updates their evaluation file. That closed loop — evaluation to learning to evidence — is what separates professional growth from professional box-checking. KickUp has no evaluation connection."
+    },
+    {
+      headline: "Frontline connects PD to the whole person — not just the learner.",
+      body: "Absence patterns, evaluation trends, credential expirations, contract renewal timelines — all of this informs professional learning decisions in Frontline. KickUp sees a learner. Frontline sees an employee. That's the difference between a PD tool and a workforce development platform."
+    },
+    {
+      headline: "KickUp + Red Rover + TCP is three vendors, not a platform.",
+      body: "The Red Rover ecosystem asks districts to manage three separate systems, three contracts, and three support channels for what Frontline does in one. When a KickUp PD completion needs to update a credential file or trigger a contract renewal, there's no automatic connection. That's not a modern HCM stack — it's a collection of tools."
+    },
+  ],
+  battlecard: {
+    their_strengths: [
+      "Modern UX/UI — higher visual appeal than Frontline PG (3.5★)",
+      "Red Rover + Learning Forward partnership ecosystem",
+      "Focused PD product attention — not a module in a large suite",
+    ],
+    our_wins: [
+      "Learning Loop — evaluation data triggers PD recommendations automatically",
+      "Danielson Framework 2022 support — natively built in",
+      "Credential tracking connection — PD completion updates HR records automatically",
+      "350+ hours of on-demand K-12 PD content — included in Professional Growth",
+      "PD connected to absence, evaluation, contract renewal in one data model",
+    ],
+    position: [
+      "KickUp is a PD tool. Frontline Professional Growth is a workforce development platform connected to evaluation, HR, and compliance data.",
+      "The Learning Loop — evaluation to PD to evidence — exists only in Frontline.",
+      "KickUp + Red Rover + TCP = three vendors. Frontline = one platform.",
+    ]
+  },
+  moves: [
+    { date:"2025", type:"threat", icon:"⚠️", title:"KickUp Now Part of Red Rover HCM Ecosystem", desc:"Feb 2026 intel confirms KickUp is actively bundled with Red Rover + Learning Forward as part of the 'modern HCM alternative' narrative. Anticipate KickUp in any deal where Red Rover is competing — they're presenting as a full-stack alternative to Frontline's Professional Growth." },
+    { date:"2025", type:"opportunity", icon:"✅", title:"Frontline PG G2 Rating Gap — Known Vulnerability, Known Response", desc:"Frontline Professional Growth is the weakest-reviewed product in the portfolio (3.5/5 G2). This is the KickUp attack surface. Counter by leading with the Learning Loop evaluation connection and demonstrating Danielson 2022 support — two things KickUp cannot match." },
+  ],
+  suggested_qs: [
+    "How do we beat KickUp when their UX is better than Frontline PG?",
+    "What's our Learning Loop story vs. KickUp's standalone PD?",
+    "How do we counter the Red Rover + KickUp + TCP ecosystem pitch?",
+    "How do we position Danielson support vs. KickUp in an evaluation deal?",
+  ],
+  qa: {
+    "How do we beat KickUp when their UX is better than Frontline PG?":
+      `Acknowledge it, then shift the comparison criteria.<br><br>"KickUp has a cleaner interface — that's fair. But let's talk about what professional growth is supposed to accomplish. If PD is disconnected from evaluation results, disconnected from HR records, and disconnected from credential tracking, a beautiful UI doesn't create better outcomes."<br><br><em>Then demo the Learning Loop: show an evaluation score triggering a PD recommendation, show the completion updating a credential file. Ask: "Can KickUp do this automatically?" The answer is no. UX is a surface. Connection is a system.</em>`,
+
+    "What's our Learning Loop story vs. KickUp's standalone PD?":
+      `The Learning Loop is the sharpest differentiation story in this segment.<br><br>"KickUp is excellent at delivering professional learning. Frontline is excellent at connecting professional learning to the decisions that matter — who needs it, why they need it, and whether it worked."<br><br><em>Walk through the three-step loop: 1) Teacher receives low Danielson observation score → Frontline surfaces targeted PD from the catalog automatically. 2) Teacher completes the PD → completion updates their evaluation file and credential record. 3) HR sees a direct line from professional growth to evaluation improvement. That chain doesn't exist in KickUp.</em>`,
+
+    "How do we counter the Red Rover + KickUp + TCP ecosystem pitch?":
+      `Reframe 'ecosystem' as 'three vendors.'<br><br>"Red Rover + KickUp + TCP is a collection of partnerships — not an integrated platform. Ask them to show you one data flow that goes from absence pattern to PD recommendation to credential update, end to end, automatically. It doesn't exist in that bundle."<br><br><em>Then position: "Frontline does this in one system. One data model, one contract, one CSM. When your absence data, evaluation data, PD data, and credential data all live together, you make better decisions. When they live in three separate systems, you make spreadsheets."</em>`,
+
+    "How do we position Danielson support vs. KickUp in an evaluation deal?":
+      `Lead with specificity — version support and evidence collection depth.<br><br>"Frontline supports Danielson Framework 2011, 2013, and 2022 editions natively — including the updated domains, rubrics, and evidence collection workflows. This is purpose-built, not a workaround."<br><br><em>Then ask: "Which Danielson edition does your district use today, and are you planning to move to the 2022 framework?" Most districts are. Then: "Show me how KickUp supports 2022 evidence collection." The answer reveals the gap — and Frontline's evaluation management is purpose-built for exactly this.</em>`,
   }
 },
 
@@ -1449,6 +1799,7 @@ function render() {
       <button class="tab-btn ${currentTab==='traps'?'active':''}" data-tab="traps" onclick="switchTab('traps')">🪤 Trap Questions</button>
       <button class="tab-btn ${currentTab==='talking'?'active':''}" data-tab="talking" onclick="switchTab('talking')">💬 Talking Points</button>
       <button class="tab-btn ${currentTab==='battlecard'?'active':''}" data-tab="battlecard" onclick="switchTab('battlecard')">⚔ Battlecard</button>
+      <button class="tab-btn ${currentTab==='winback'?'active':''}" data-tab="winback" onclick="switchTab('winback')">🎯 Win-Back Strategy</button>
       <button class="tab-btn ${currentTab==='moves'?'active':''}" data-tab="moves" onclick="switchTab('moves')">📡 Intel Feed</button>
     </div>
 
@@ -1596,6 +1947,114 @@ function render() {
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- WIN-BACK STRATEGY ────────────────────────────────────────────────── -->
+    <div class="tab-content ${currentTab==='winback'?'active':''}" id="tab-winback">
+      ${!d.win_back ? `
+        <div class="card" style="padding:40px;text-align:center;color:var(--text-muted)">
+          <div style="font-size:32px;margin-bottom:16px">🎯</div>
+          <div style="font-weight:600;margin-bottom:8px">Win-Back Strategy Not Available</div>
+          <div>This competitor doesn't have documented win-back scenarios yet.</div>
+        </div>
+      ` : `
+        <div style="display:grid;gap:24px">
+          <!-- HEADLINE & CONTEXT -->
+          <div class="card">
+            <div style="font-size:18px;font-weight:700;color:var(--fl-orange);margin-bottom:8px">${d.win_back.headline}</div>
+            <div style="color:var(--text-secondary);font-size:14px;line-height:1.6">${d.win_back.context}</div>
+          </div>
+
+          <!-- TIMELINE -->
+          <div class="card">
+            <div class="card-label">📅 Typical Boomerang Timeline</div>
+            <div style="display:grid;gap:12px;font-size:13px">
+              ${Object.entries(d.win_back.typical_timeline).map(([phase, desc]) => `
+                <div style="border-left:3px solid var(--fl-orange);padding-left:12px;padding-top:8px;padding-bottom:8px">
+                  <div style="font-weight:600;color:var(--text-primary);margin-bottom:4px">${phase.replace(/_/g,' ').toUpperCase()}</div>
+                  <div style="color:var(--text-secondary);line-height:1.5">${desc}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- TALKING POINTS -->
+          <div class="card">
+            <div class="card-label">💬 Win-Back Talking Points</div>
+            <div style="display:grid;gap:16px">
+              ${d.win_back.talking_points.map(tp => `
+                <div style="border:1px solid var(--border);border-radius:8px;padding:16px;background:var(--surface-2)">
+                  <div style="font-weight:600;color:var(--fl-orange);margin-bottom:6px">${tp.headline}</div>
+                  <div style="color:var(--text-secondary);font-size:13px;line-height:1.6;margin-bottom:8px">${tp.body}</div>
+                  <div style="background:var(--fl-blue-light);border-left:3px solid var(--fl-blue);padding:8px 12px;border-radius:4px;font-size:12px;color:var(--fl-blue);font-style:italic">${tp.scenario}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- REFERENCE STRATEGY -->
+          <div class="card">
+            <div class="card-label">🤝 How to Use Boomerang References</div>
+            <div style="display:grid;gap:12px;font-size:13px">
+              <div style="color:var(--text-secondary);font-weight:600;margin-bottom:4px">Setup:</div>
+              <div style="color:var(--text-secondary)">${d.win_back.boomerang_reference_strategy.setup}</div>
+              ${['step_1','step_2','step_3','step_4'].map((step, idx) => `
+                <div style="border-left:3px solid var(--green);padding-left:12px;padding-top:8px;padding-bottom:8px;margin-top:4px">
+                  <div style="font-weight:600;color:var(--fl-blue);margin-bottom:4px">Step ${idx+1}:</div>
+                  <div style="color:var(--text-secondary);line-height:1.5">${d.win_back.boomerang_reference_strategy[step]}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- OBJECTION HANDLERS -->
+          <div class="card">
+            <div class="card-label">🛡️ Objection Handlers</div>
+            <div style="display:grid;gap:16px">
+              ${Object.entries(d.win_back.objection_handlers).map(([objection, response]) => `
+                <div style="border:1px solid var(--border);border-radius:8px;padding:16px">
+                  <div style="font-weight:600;color:var(--red);margin-bottom:8px;font-style:italic">"${objection}"</div>
+                  <div style="margin-bottom:12px">
+                    <div style="font-weight:600;color:var(--text-primary);font-size:12px;margin-bottom:4px">YOUR REFRAME:</div>
+                    <div style="color:var(--text-secondary);font-size:13px;line-height:1.5">${response.reframe}</div>
+                  </div>
+                  <div>
+                    <div style="font-weight:600;color:var(--text-primary);font-size:12px;margin-bottom:4px">TALKING POINT:</div>
+                    <div style="color:var(--text-secondary);font-size:13px;line-height:1.5">${response.talking_point}</div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- DEPLOYMENT TRIGGERS -->
+          <div class="card">
+            <div class="card-label">🎯 When to Deploy Win-Back Strategy</div>
+            <div style="display:grid;gap:8px;font-size:13px">
+              ${d.win_back.when_to_deploy.map(trigger => `
+                <div style="display:flex;gap:8px;align-items:flex-start">
+                  <div style="color:var(--green);font-weight:700">✓</div>
+                  <div style="color:var(--text-secondary)">${trigger}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <!-- REFERENCE QUALIFICATIONS -->
+          <div class="card" style="background:var(--fl-orange-light);border:1px solid var(--fl-orange-mid)">
+            <div class="card-label" style="color:var(--fl-orange)">👥 Ideal Boomerang Reference Qualifications</div>
+            <div style="display:grid;gap:8px;font-size:13px">
+              ${d.win_back.ref_criteria.map(criteria => `
+                <div style="display:flex;gap:8px;align-items:flex-start">
+                  <div style="color:var(--fl-orange);font-weight:700">●</div>
+                  <div style="color:var(--text-secondary)">${criteria}</div>
+                </div>
+              `).join('')}
+            </div>
+            <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--fl-orange-mid);font-size:12px;color:var(--amber);font-weight:600">ACTION: Document 2-3 boomerang customer stories with specific timelines, pain points, and reasons for return. This becomes your strongest proof point against this competitor.</div>
+          </div>
+        </div>
+      `}
     </div>
 
     <!-- INTEL FEED ────────────────────────────────────────────────── -->
